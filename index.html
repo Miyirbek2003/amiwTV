@@ -2894,6 +2894,11 @@
         spaceBetween: 100,
         effect: "fade",
         slidesPerView: 1,
+        
+autoplay: {
+    delay: 3000, // Set the delay in milliseconds (e.g., 5000 for 5 seconds)
+    disableOnInteraction: false, // Set to false if you want autoplay to continue even when the user interacts with the slider
+  },
         navigation: {
           nextEl: ".nav-btn_right",
           prevEl: ".nav-btn_left ",
@@ -3156,7 +3161,10 @@
       const swiper2 = new Swiper(".swiper2", {
         speed: 400,
         spaceBetween: 100,
-
+autoplay: {
+    delay: 3000, // Set the delay in milliseconds (e.g., 5000 for 5 seconds)
+    disableOnInteraction: false, // Set to false if you want autoplay to continue even when the user interacts with the slider
+  },
         loop: true,
       });
     </script>
@@ -3168,6 +3176,10 @@
         spaceBetween: 100,
         loop: true,
 
+        autoplay: {
+    delay: 3000, // Set the delay in milliseconds (e.g., 5000 for 5 seconds)
+    disableOnInteraction: false, // Set to false if you want autoplay to continue even when the user interacts with the slider
+  },
         navigation: {
           nextEl: ".nav-btn_right",
           prevEl: ".nav-btn_left ",
