@@ -2201,11 +2201,7 @@
                       <div class="announcements__list">
                         <div class="swiper swiper1">
                           <div class="swiper-wrapper slider-1"></div>
-                          <span
-                            class="swiper-notification"
-                            aria-live="assertive"
-                            aria-atomic="true"
-                          ></span>
+                          
                         </div>
                       </div>
                       <div class="announcements__arrows">
@@ -2907,9 +2903,9 @@
         const data1 = await response.json();
         const slider = data1.items;
 
-        let blog = slider.map((slide) => {
+        let blog = slider.map((slide, index) => {
           return `
-          <div class="swiper-slide announcements__item" >
+          <div class="swiper-slide announcements__item" style="z-index: ${index == 0 ? 1 : 0} ;" >
                 <div class="announcements__item-inner announcements__item-inner_top">
                       <div class="announcements__bg">
                             <img src="https://amu-admin.webclub.uz/images/${slide.image}"alt=""/>
