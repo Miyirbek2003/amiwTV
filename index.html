@@ -2898,52 +2898,32 @@
         let blog = slider.map((slide) => {
           return `
           <div class="swiper-slide announcements__item" >
-                              <div
-                                class="announcements__item-inner announcements__item-inner_top"
-                              >
-                                <div class="announcements__bg">
-                                  <img
-                                    src="https://amu-admin.webclub.uz/images/${
-                                      slide.image
-                                    }"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="announcements__text">
-                                  <div class="announcements__title">
+                <div class="announcements__item-inner announcements__item-inner_top">
+                      <div class="announcements__bg">
+                            <img src="https://amu-admin.webclub.uz/images/${slide.image}"alt=""/>
+                      </div>
+                      <div class="announcements__text">
+                          <div class="announcements__title">
                                     ${
                                       slide.translations.filter(
                                         (lang) => lang.locale == "uz"
                                       )[0].title
                                     }
-                                  </div>
-                                </div>
-                                <div class="announcements__previev-column">
-                                  <div class="announcements__preview-wrp">
-                                    <div class="announcements__preview-outer">
-                                      <img
-                                        src="https://amu-admin.webclub.uz/images/${
-                                          slide.image
-                                        }"
-                                        alt=""
-                                      />
-                                    </div>
-                                    <div class="announcements__preview">
-                                      <img
-                                        src="https://amu-admin.webclub.uz/images/${
-                                          slide.image
-                                        }"
-                                        alt=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
+                          </div>
+                      </div>
+                      <div class="announcements__previev-column">
+                          <div class="announcements__preview-wrp">
+                              <div class="announcements__preview-outer">
+                                    <img src="https://amu-admin.webclub.uz/images/${slide.image}" alt=""/>
                               </div>
-                              <div class="announcements__item-inner">
-                                <div
-                                  class="announcements__descr"
-                                  style="-webkit-box-orient: vertical"
-                                >
+                              <div class="announcements__preview">
+                                    <img src="https://amu-admin.webclub.uz/images/${slide.image}" alt=""/>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcements__item-inner">
+                          <div class="announcements__descr" style="-webkit-box-orient: vertical" >
                                   <p>
                                     ${
                                       slide.translations.filter(
@@ -2951,18 +2931,18 @@
                                       )[0].description
                                     }
                                   </p>
-                                </div>
-                                <div class="announcements__btn-wrp">
+                            </div>
+                            <div class="announcements__btn-wrp">
                                   <a
                                   class="announcements__btn btn btn_light btn_fixed"
-                                  href="/tvShows.html"
                                   id="${slide.id}"
                                   onclick="sess(event)"
+                                  href="/tvShows.html"
                                     >Ko'rish</a
                                   >
-                                </div>
-                              </div>
                             </div>
+                      </div>
+          </div>
           `;
         });
         let blogHTML1 = blog.join("");
@@ -2974,7 +2954,7 @@
           // swiper-2
 
           let blog2 = slider.map((slide) => {
-            console.log('aa');
+            
           return `
           <div class="swiper-slide">
                           <div class="tv-projects__item">
@@ -3144,7 +3124,7 @@
           `;
         document
           .querySelector(".news-box__row")
-          .insertAdjacentHTML("afterbegin", blog3);
+          .insertAdjacentHTML("afterbegin", blog4);
       }
 
       function newsSess(event) {
@@ -3164,7 +3144,7 @@
         speed: 400,
         spaceBetween: 100,
         effect: "fade",
-
+        slidesPerView: 1,
         navigation: {
           nextEl: ".nav-btn_right",
           prevEl: ".nav-btn_left ",
