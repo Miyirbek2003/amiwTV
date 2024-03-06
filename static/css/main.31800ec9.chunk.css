@@ -8531,7 +8531,7 @@ a[href]:not([class]):hover {
     font-size: 1.6rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    overflow: hidden
+    
 }
 
 @media (max-width:1279px) {
