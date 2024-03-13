@@ -8544,10 +8544,18 @@ a[href]:not([class]):hover {
 
 @media (max-width:767px) {
     .news_tiled .news__title {
-        font-size: 1.4rem;
-        max-height: 3.8rem;
+        font-size: 14px !important;
+        
         margin-bottom: 1rem
     }
+
+    .proj-header__thumb{
+        display: none;
+    }
+    .proj-header__content{
+        margin: 0 !important;
+    }
+    
 }
 
 

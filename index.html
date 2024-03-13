@@ -2198,11 +2198,23 @@
               <div class="container custom-container">
                 <div class="row">
                   <div class="col-12 col-lg-9" style="z-index: 2">
-                    <video width="100%" height="360" controls>
-                      <source src="rtmp://st3.mediabay.uz/static/ADTV" type="rtmp/mp4">
-                      Your browser does not support the video tag.
-                  </video>
+                      <div class="announcements announcements_home">
+
+                        <div class="announcements__list">
+                          <div class="swiper-container swiper1 swiper-container-fade swiper-container-initialized swiper-container-horizontal swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden swiper1">
+                            <div class="swiper-wrapper slider-1">
+
+                            </div>
+                            <div class="announcements__arrows"><div class="nav-btn nav-btn_left nav-btn_light"><svg width="12" height="10" version="1" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H3l3-2V1L5 0 0 5l5 5 1-1a1 1 0 0 0 0-1L3 6h8l1-1-1-1z" fill-rule="nonzero"></path></svg></div><div class="nav-btn nav-btn_right nav-btn_light"><svg width="12" height="10" version="1" xmlns="http://www.w3.org/2000/svg"><path d="M1 4h8L6 2V1l1-1 5 5-5 5-1-1a1 1 0 0 1 0-1l3-2H1L0 5l1-1z" fill-rule="nonzero"></path></svg></div></div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+
+                    
                   </div>
+                  
                   <div class="d-none d-sm-none d-md-none d-lg-block col-lg-3">
                     <div class="live-slider">
                       <div class="live-slider__list swiper2">
@@ -2850,10 +2862,10 @@
       const swiper = new Swiper(".swiper1", {
         speed: 400,
         spaceBetween: 100,
-        effect: "fade",
+        effect: "fade", 
         slidesPerView: 1,
         
-autoplay: {
+          autoplay: {
     delay: 3000, // Set the delay in milliseconds (e.g., 5000 for 5 seconds)
     disableOnInteraction: false, // Set to false if you want autoplay to continue even when the user interacts with the slider
   },
@@ -2918,10 +2930,14 @@ autoplay: {
         });
         let blogHTML1 = blog.join("");
 
-        // document
-        //   .querySelector(".slider-1")
-        //   .insertAdjacentHTML("afterbegin", blogHTML1);
-
+        document
+          .querySelector(".slider-1")
+          .insertAdjacentHTML("afterbegin", blogHTML1);
+        document.body.style.maxWidth = '500'
+        setTimeout(() => {
+          document.body.style.maxWidth = '100%'
+        }, 10);
+        
           // swiper-2
 
           let blog2 = slider.map((slide) => {
@@ -3101,7 +3117,7 @@ autoplay: {
         localStorage.setItem("slug", event.target.id);
       }
       //  -- NEWS SECTION END --
-      window.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
         getSlider();
         getNews();
       });
